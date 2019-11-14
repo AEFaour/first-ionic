@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>converter</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button href="/home">Home</ion-button>
+    <ion-button routerLink="/form">Formulaire</ion-button>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Euros</ion-label>
+            <ion-input [(ngModel)]="inputAmount" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{ inputAmount * changeRate }}</ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-label position="stacked">Taille en Centmètres</ion-label>
+            <ion-input [(ngModel)]="sizeInCentimeters" (ionChange)="centimetersToImperial()" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label> {{ numberOfFeet }} Pieds et {{ numberOfInches }} pouces</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Centmètres</ion-label>
+            <ion-input [(ngModel)]="inputAmount1" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{ inputAmount1 / changeRate2 }} pieds</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{ inputAmount1 * changeRate11 }} pouces</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Pouces</ion-label>
+            <ion-input [(ngModel)]="inputAmount2" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{ inputAmount2 * changeRate2 }} centmètres</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Pieds</ion-label>
+            <ion-input [(ngModel)]="inputAmount22" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{ inputAmount22 * changeRate22 }} centmètres</ion-label>
+        </ion-item>
+
+    </ion-list>
+</ion-content>

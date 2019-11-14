@@ -1,14 +1,218 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title class="ion-text-center">
+            Ionic Blank
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <div class="ion-padding">
+        <h1 class="ion-text-center">Hello World</h1>
+        <ion-button href="/form">Formulaire</ion-button>
+        <ion-button href="/converter">Converteur</ion-button>
+
+        <ion-button color="danger">
+            <ion-icon name="help-buoy" slot="end"></ion-icon>
+            Cliquez moi
+        </ion-button>
+    </div>
+    <ion-list>
+        <ion-list-header>fruits</ion-list-header>
+
+        <ion-item-sliding>
+            <ion-item color="medium">menu glissant</ion-item>
+            <ion-item-options side="end">
+                <ion-button size="small" color="danger">delete</ion-button>
+                <ion-item-option color="success">Edit</ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+
+
+        <ion-item color="danger">
+            <ion-avatar slot="end">
+                <ion-img src="/assets/apple.jpg"></ion-img>
+            </ion-avatar>
+            <ion-avatar slot="end">
+                <ion-img src="data:image/jpeg;base64,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"></ion-img>
+            </ion-avatar>
+            pommes
+        </ion-item>
+        <ion-item color="tertiary">
+            <ion-avatar slot="end">
+                <ion-img src="/assets/pear.jpg"></ion-img>
+            </ion-avatar>
+            <ion-avatar slot="end">
+                <ion-img src="https://i.pinimg.com/originals/ea/d2/05/ead20558c2f6bad71ed75261ca8607ab.jpg"></ion-img>
+            </ion-avatar>
+            poires
+        </ion-item>
+        <ion-item color="primary">
+            <ion-avatar slot="end">
+                <ion-img src="/assets/orange.jpg"></ion-img>
+            </ion-avatar>
+            <ion-avatar slot="end">
+                <ion-img src="https://t4.ftcdn.net/jpg/01/02/81/99/500_F_102819994_rXUugnCDHvjNP7ChdsQoh9Wbwh6ab6tJ.jpg"></ion-img>
+            </ion-avatar>
+            oranges
+        </ion-item>
+    </ion-list>
+    <ion-item-group>
+        <ion-item-divider>A</ion-item-divider>
+        <ion-item color="danger">
+            <ion-avatar slot="end">
+                <ion-img src="/assets/apricot.jpg"></ion-img>
+            </ion-avatar>
+            <ion-avatar slot="end">
+                <ion-img src="https://pbs.twimg.com/profile_images/835006688616837121/owvGHc1H_400x400.jpg"></ion-img>
+            </ion-avatar>
+            abricots</ion-item>
+        <ion-item color="tertiary">
+            <ion-avatar slot="end">
+                <ion-img src="/assets/ananas.jpg"></ion-img>
+            </ion-avatar>
+            <ion-avatar slot="end">
+                <ion-img src="https://st2.depositphotos.com/2775977/8847/v/950/depositphotos_88470892-stock-illustration-vector-flat-logo-design-of.jpg"></ion-img>
+            </ion-avatar>
+            ananas</ion-item>
+        <ion-item-divider>B</ion-item-divider>
+        <ion-item color="primary">
+            <ion-avatar slot="end">
+                <ion-img src="/assets/banana.jpg"></ion-img>
+            </ion-avatar>
+            <ion-avatar slot="end">
+                <ion-img src="https://images.yaoota.com/EfXpXcveywx3k_GFH6pmjrnovxs=/trim/yaootaweb-production-ae/media/crawledproductimages/6b5087144456e834ce352cb268fd068aa878fc37.jpg"></ion-img>
+            </ion-avatar>
+            bananes</ion-item>
+        <ion-item color="danger">
+            <ion-avatar slot="end">
+                <ion-img src="/assets/brugnon.jpg"></ion-img>
+            </ion-avatar>
+            <ion-avatar slot="end">
+                <ion-img src="https://previews.123rf.com/images/martialred/martialred1707/martialred170700061/82070372-peach-fruit-ou-nectarine-avec-feuille-ic%C3%B4ne-vector-illustration-pour-applications-et-sites-web-alimenta.jpg"></ion-img>
+            </ion-avatar>
+            brugnons</ion-item>
+    </ion-item-group>
+
+    <ion-grid>
+        <ion-row color="danger">
+            <ion-col size="3">col 1</ion-col>
+            <ion-col size="9">col 2</ion-col>
+        </ion-row>
+        <ion-row color="primary">
+            <ion-col size="6" offset="3">
+                colonne centrée horizontalement
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!--<ion-list>
+        <ion-item>
+            <ion-label>Pokémon Yellow</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Mega Man X</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>The Legend of Zelda</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Pac-Man</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Super Mario World</ion-label>
+        </ion-item>
+    </ion-list>-->
+
+    <!-- List of Input Items -->
+    <!--<ion-list>
+        <ion-item>
+            <ion-label>Input</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Toggle</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>Radio</ion-label>
+            <ion-radio slot="end"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Checkbox</ion-label>
+            <ion-checkbox slot="start"></ion-checkbox>
+        </ion-item>
+    </ion-list>-->
+
+    <!-- List of Sliding Items -->
+    <!-- <ion-list>
+        <ion-item-sliding>
+            <ion-item>
+                <ion-label>Item</ion-label>
+            </ion-item>
+            <ion-item-options side="end">
+                <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+            <ion-item>
+                <ion-label>Item</ion-label>
+            </ion-item>
+            <ion-item-options side="end">
+                <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>-->
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            <ion-card-title>Card Title</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-item>
+            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-label>ion-item in a card, icon left, button right</ion-label>
+            <ion-button fill="outline" slot="end">View</ion-button>
+        </ion-item>
+
+        <ion-card-content>
+            This is content, without any paragraph or header tags, within an ion-card-content element.
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-item href="#" class="activated">
+            <ion-icon name="wifi" slot="start"></ion-icon>
+            <ion-label>Card Link Item 1 .activated</ion-label>
+        </ion-item>
+
+        <ion-item href="#">
+            <ion-icon name="wine" slot="start"></ion-icon>
+            <ion-label>Card Link Item 2</ion-label>
+        </ion-item>
+
+        <ion-item class="activated">
+            <ion-icon name="warning" slot="start"></ion-icon>
+            <ion-label>Card Button Item 1 .activated</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="walk" slot="start"></ion-icon>
+            <ion-label>Card Button Item 2</ion-label>
+        </ion-item>
+    </ion-card>
 </ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-label>
+            &copy; moi et mon nombril
+        </ion-label>
+    </ion-toolbar>
+</ion-footer>

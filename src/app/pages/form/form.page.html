@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+
+        <ion-title class="ion-text-center">form</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button href="/home">Home</ion-button>
+    <ion-button routerLink="/converter">Converteur</ion-button>
+    <h3>{{ name }}</h3>
+    <p>{{ fruits[0] }}</p>
+    <p>{{ 5 * 8 }}</p>
+    <p>{{ sayHello() }}</p>
+    <ion-button expand="full" [color]="buttonColor" (click)="showHideForm()">GO</ion-button>
+    <ion-list [hidden]="formIsMasked">
+        <ion-item>
+            <ion-label position="floating">Nom</ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Toggle</ion-label>
+            <ion-toggle slot="end" checked></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label>Gender</ion-label>
+            <ion-select placeholder="Select One">
+                <ion-select-option value="f">Female</ion-select-option>
+                <ion-select-option value="m">Male</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Hair Color</ion-label>
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+                <ion-select-option value="brown">Brown</ion-select-option>
+                <ion-select-option value="blonde">Blonde</ion-select-option>
+                <ion-select-option value="black">Black</ion-select-option>
+                <ion-select-option value="red">Red</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Profession</ion-label>
+            <ion-select multiple="true" okText="va bene" cancelText="va male">
+                <ion-select-option>Developer</ion-select-option>
+                <ion-select-option>Graphiste</ion-select-option>
+                <ion-select-option>Project Chief</ion-select-option>
+                <ion-select-option>Sysamin</ion-select-option>
+                <ion-select-option>DBA</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-radio-group>
+            <ion-item>
+                <ion-label>Féminin</ion-label>
+                <ion-radio value="F" slot="start" checked="true"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Masculin</ion-label>
+                <ion-radio value="M" slot="start"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Neutre</ion-label>
+                <ion-radio value="N" slot="start"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+        <!--<ion-item>
+            <ion-label>Langages</ion-label>
+            <ion-select okText="Valider" cancelText="Annuler">
+                <ion-select-option>Java</ion-option>
+                    <ion-select-option>PHP</ion-option>
+                        <ion-select-option>Python</ion-option>
+                            <ion-select-option selected>C++</ion-option>
+            </ion-select>
+        </ion-item>-->
+    </ion-list>
+</ion-content>
